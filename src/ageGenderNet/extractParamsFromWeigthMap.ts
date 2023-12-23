@@ -10,7 +10,7 @@ export function extractParamsFromWeigthMap(
   const paramMappings: ParamMapping[] = []
 
   const extractWeightEntry = extractWeightEntryFactory(weightMap, paramMappings)
-
+// Fixed weight maps. 
   function extractFcParams(prefix: string): FCParams {
     const weights = extractWeightEntry<tf.Tensor2D>(`${prefix}/weights`, 2)
     const bias = extractWeightEntry<tf.Tensor1D>(`${prefix}/bias`, 1)
